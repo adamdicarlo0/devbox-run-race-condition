@@ -1,0 +1,38 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.6/.schema/devbox.schema.json",
+  "packages": [
+    "nodejs@latest",
+    "bashInteractive@latest",
+    "coreutils@latest",
+    "findutils@latest",
+    "jq@latest",
+    "getopt@latest",
+    "rsync@latest",
+    "zip@latest",
+    "gnused@latest",
+    "flock@latest",
+    "esbuild@latest",
+    "shfmt@latest"
+  ],
+  "env": {
+    "DEVBOX_COREPACK_ENABLED": "1"
+  },
+  "shell": {
+    "init_hook": [
+      "devbox run hello",
+      "devbox run world",
+      "devbox run hello",
+      "devbox run world"
+    ],
+    "scripts": {
+      "hello": [
+        "echo hello",
+        "sleep 0.2"
+      ],
+      "world": [
+        "echo world",
+        "sleep 0.2"
+      ]
+    }
+  }
+}
